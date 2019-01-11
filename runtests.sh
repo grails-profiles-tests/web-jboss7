@@ -27,7 +27,6 @@ if [ $EXIT_STATUS -ne 0 ]; then
 fi
 
 killall -9 java
-killall node
 
 end=`date +%s`
 runtime=$((end-start))
