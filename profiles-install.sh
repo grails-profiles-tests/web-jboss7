@@ -29,9 +29,9 @@ cd ../../
 
 mkdir -p $HOME/.grails/wrapper
 
-cp /home/travis/build/grails/grails-profiles-tests/build/grails-wrapper/wrapper/build/libs/grails4-wrapper-1.0.1.BUILD-SNAPSHOT.jar $HOME/.grails/wrapper/grails4-wrapper.jar
+cp /home/travis/build/grails-profiles-tests/web-jboss7/build/grails-wrapper/wrapper/build/libs/grails4-wrapper-1.0.1.BUILD-SNAPSHOT.jar $HOME/.grails/wrapper/grails4-wrapper.jar
 
-sdk install grails dev /home/travis/build/grails/grails-profiles-tests/build/grails-core
+sdk install grails dev /home/travis/build/grails-profiles-tests/web-jboss7/build/grails-core
 
 sdk install grails
 
