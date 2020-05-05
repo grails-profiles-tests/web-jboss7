@@ -14,6 +14,11 @@ ext {
           'web',
           'web-jboss7',
   ]
+  profilesBranch = [
+          'base': '3.3.x',
+          'web': '3.3.x',
+          'web-jboss7': '1.0.x'
+  ]
 }
 
 task deleteProfileApps {
@@ -41,7 +46,7 @@ task cloneProfiles {
   doLast() {
     profiles.each { String profile ->
       def grgit = Grgit.clone(dir: "${buildDir}/${profile}".toString(),
-              uri: "https://github.com/${profilesSlug}/${profile}.git")
+              uri: "https://github.com/${profilesSlug}/${profile}.git", refToCheckout: profilesBranch.get(profile))
     }
   }
 }
